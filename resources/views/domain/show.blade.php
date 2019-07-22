@@ -30,10 +30,7 @@
     }else{
         $domainContent=array();
     }
-    $ads='false';
-    if(!empty($channel['siteConfig']->site_ads) && $channel['siteConfig']->site_ads=='on'){
-        $ads='true';
-    }
+    $ads='true';
     if(!empty($domain['attribute']['ads']) && $domain['attribute']['ads']=='disable'){
         $ads='false';
     }else if($domain['status']=='blacklist' && $domain['status']=='disable' && $domain['status']=='delete'){
