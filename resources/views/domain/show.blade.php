@@ -100,6 +100,18 @@
                             <p><strong>{!! $domain['domain'] !!}</strong></p>
                         </a>
                     </div>
+                    @if($ads=='true' && config('app.env')!='local')
+                        <div class="form-group">
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-6739685874678212"
+                                 data-ad-slot="7536384219"
+                                 data-ad-format="auto"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                    @endif
                     @if(!empty($domain['attribute']['whois']))
                         <div class="form-group mt-2">
                             <div class="card">
