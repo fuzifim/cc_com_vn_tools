@@ -119,9 +119,13 @@
                                 và được cập nhật vào ngày {!! $domain['updated_at']->toDateTime()->setTimezone(new \DateTimeZone(config('app.timezone')))->format('Y-m-d H:i:s') !!} nó có lượt xem là {!! $domain['view'] !!}
                                 @if(strlen($domain['title']))
                                     <p>Tiêu đề của trang web là <code>{!! $domain['title'] !!}</code> </p>
+                                @else
+                                    <p>Hiện tại chúng tôi chưa thu thập được thông tin tiêu đề cho trang web {!! $domain['domain'] !!}</p>
                                 @endif
                                 @if(strlen($domain['description']))
                                     <p>Trang web có nội dung mô tả là: <code>{!! $domain['description'] !!}</code></p>
+                                @else
+                                    <p>Hiện tại chúng tôi chưa thu thập được thông tin mô tả cho trang web {!! $domain['domain'] !!}</p>
                                 @endif
                                 <p>Tên miền <strong>{!! $domain['domain'] !!}</strong> được chúng tôi lưu trữ với mục đích chia sẻ các thông tin liên quan đến nó cho người xem cần tìm hiểu thông tin về tên miền này.
                                     Mặc dù chúng tôi luôn cố gắng để truyền tải thông tin đầy đủ và chính xác hơn, tuy nhiên sẽ có một số tên miền và thông tin trang web chúng tôi vẫn còn thiếu sót chưa cập nhật đầy đủ. <br>
