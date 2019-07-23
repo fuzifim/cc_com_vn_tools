@@ -115,17 +115,18 @@
                     <div class="form-group mt-2">
                         <div class="card">
                             <div class="card-body">
-                                Tên miền {!! $domain['domain'] !!} được lưu trữ vào ngày {!! $domain['created_at'] !!}
-                                và được cập nhật vào ngày {!! $domain['updated_at'] !!} nó có lượt xem là {!! $domain['view'] !!}
+                                Tên miền {!! $domain['domain'] !!} được lưu trữ vào ngày {!! $domain['created_at']->toDateTime()->setTimezone(new \DateTimeZone(config('app.timezone')))->format('Y-m-d H:i:s') !!}
+                                và được cập nhật vào ngày {!! $domain['updated_at']->toDateTime()->setTimezone(new \DateTimeZone(config('app.timezone')))->format('Y-m-d H:i:s') !!} nó có lượt xem là {!! $domain['view'] !!}
                                 @if(strlen($domain['title']))
                                     <p>Tiêu đề của trang web là <code>{!! $domain['title'] !!}</code> </p>
                                 @endif
                                 @if(strlen($domain['description']))
                                     <p>Trang web có nội dung mô tả là: <code>{!! $domain['description'] !!}</code></p>
                                 @endif
-                                <p>Tên miền <strong>{!! $domain['domain'] !!}</strong> được chúng tôi lưu trữ với mục đích chia sẻ các thông tin liên quan đến nó cho người xem cần tìm hiểu thông tin về tên miền này. <br>
+                                <p>Tên miền <strong>{!! $domain['domain'] !!}</strong> được chúng tôi lưu trữ với mục đích chia sẻ các thông tin liên quan đến nó cho người xem cần tìm hiểu thông tin về tên miền này.
                                     Mặc dù chúng tôi luôn cố gắng để truyền tải thông tin đầy đủ và chính xác hơn, tuy nhiên sẽ có một số tên miền và thông tin trang web chúng tôi vẫn còn thiếu sót chưa cập nhật đầy đủ. <br>
-                                    Rất mong nhận được sự thông cảm! 
+                                    <p><i>Rất mong nhận được sự thông cảm!</i></p>
+                                    <p>Bạn có thể xem thêm các thông tin tên miền mới cập nhật khác <a href="{!! route('home') !!}">tại đây</a></p>
                                 </p>
                             </div>
                         </div>
