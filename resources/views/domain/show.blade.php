@@ -115,8 +115,7 @@
                     <div class="form-group mt-2">
                         <div class="card">
                             <div class="card-body">
-                                Tên miền {!! $domain['domain'] !!} được lưu trữ vào ngày {!! $domain['created_at']->toDateTime()->setTimezone(new \DateTimeZone(config('app.timezone')))->format('Y-m-d H:i:s') !!}
-                                và được cập nhật vào ngày {!! $domain['updated_at']->toDateTime()->setTimezone(new \DateTimeZone(config('app.timezone')))->format('Y-m-d H:i:s') !!} nó có lượt xem là {!! $domain['view'] !!}
+                                Tên miền {!! $domain['domain'] !!} được cập nhật vào ngày {!! $domain['updated_at']->toDateTime()->setTimezone(new \DateTimeZone(config('app.timezone')))->format('Y-m-d H:i:s') !!} nó có lượt xem là {!! $domain['view'] !!}
                                 @if(strlen($domain['title']))
                                     <p>Tiêu đề của trang web là <code>{!! $domain['title'] !!}</code> </p>
                                 @else
