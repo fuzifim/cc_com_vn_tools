@@ -36,6 +36,7 @@
     }else if($domain['status']=='blacklist' && $domain['status']=='disable' && $domain['status']=='delete'){
         $ads='false';
     }
+    $ads='false';
 
 ?>
 @extends('layouts.default')
